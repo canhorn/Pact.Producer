@@ -33,8 +33,7 @@ jobs:
 
       - name: Run Tests
         shell: pwsh
-        working-directory: .scripts/dotnet
-        run: '&./run-tests.ps1'
+        run: '&.scripts/dotnet/run-tests.ps1'
 
   can-i-deploy:
     runs-on: ubuntu-latest
