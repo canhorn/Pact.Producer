@@ -67,7 +67,7 @@ jobs:
       - name: Deploy
         run: |
           PACT_CLI="docker run --rm -e PACT_BROKER_BASE_URL -e PACT_BROKER_TOKEN pactfoundation/pact-cli:latest"
-          @"${PACT_CLI}" broker create-version-tag \
+          "${PACT_CLI}" broker create-version-tag \
             --pacticipant ${PACTICIPANT} \
             --version ${GIT_COMMIT} \
             --tag production
