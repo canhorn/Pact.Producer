@@ -44,7 +44,7 @@ jobs:
       - name: Can I deploy?
         run: |
           PACT_CLI="docker run --rm -e PACT_BROKER_BASE_URL -e PACT_BROKER_TOKEN pactfoundation/pact-cli:latest"
-          @"${PACT_CLI}" broker can-i-deploy \
+          "${PACT_CLI}" broker can-i-deploy \
             --pacticipant ${PACTICIPANT} \
             --version ${GIT_COMMIT} \
             --to stage
